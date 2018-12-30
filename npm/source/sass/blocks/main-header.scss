@@ -1,0 +1,97 @@
+.main-header {
+  font-family: "Gotham Pro", sans-serif;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.main-header__logo {
+  margin-bottom: 15px;
+}
+
+.main-header__logo img {
+  height: 80px;
+  width: 49%;
+}
+
+.main-header .main-header__btn {
+  padding: 10px;
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.main-header__contact {
+  text-align: center;
+}
+
+.main-header__contact p {
+  font-size: 22px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.main-header__contact a {
+  color: $blue;
+  font-size: 15px;
+}
+
+.main-header__booking {
+  margin-bottom: 15px;
+}
+
+
+@media (min-width: 768px) {
+  .main-header__logo {
+    margin-bottom: 0;
+  }
+
+  .main-header__logo img {
+    width: 49%;
+  }
+
+  .main-header .main-header__btn {
+    font-size: 12px;
+    padding: 15px;
+  }
+
+  .main-header__booking {
+    margin-bottom: 0;
+  }
+
+  .main-header__contact {
+    text-align: left;
+  }
+
+  .main-header__contact p {
+    font-size: 15px;
+    text-align: right;
+  }
+
+  .main-header__contact a {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-header .main-header__btn {
+    font-size: 13px;
+  }
+
+  .main-header__contact p {
+    font-size: 20px;
+  }
+
+  .main-header__contact a {
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .main-header__contact p {
+    font-size: 22px;
+  }
+}

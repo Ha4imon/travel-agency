@@ -1,0 +1,18 @@
+.btn {
+  display: block;
+  border: 1px solid $blue;
+  color: $blue;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px;
+  transition: background-color .3s,
+    color .3s;
+
+  &:hover {
+    background-color: $blue;
+    color: #fff;
+  }
+}
