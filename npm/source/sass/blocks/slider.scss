@@ -1,0 +1,125 @@
+.slider {
+  background-color: #3b7933;
+  background-image: url('../img/slide1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Gotham Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 400px;
+}
+
+.slider__wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.slider__preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.slider__preview b {
+  color: #fff;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.slider__preview p {
+  color: #fff;
+  font-size: 19px;
+  margin: 20px 0 50px;
+}
+
+.slider__preview a {
+  background-color: $blue;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 30px;
+  width: 185px;
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: darken($blue, 10%);
+  }
+}
+
+.slider__control {
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  right: 80px;
+  width: 70px;
+  height: 35px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    opacity: 0.5;
+    width: 2px;
+    height: calc(100% - 3px);
+  }
+}
+
+.slider__btn-left,
+.slider__btn-right {
+  position: relative;
+  font-size: 0;
+  height: 100%;
+  width: 50%;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 20px;
+    height: 2px;
+  }
+
+  &::after {
+    top: 25px;
+  }
+
+  &::before {
+    top: 12px;
+  }
+}
+
+.slider__btn-left:hover,
+.slider__btn-right:hover {
+  &::after,
+  &::before {
+    background-color: $blue;
+  }
+}
+
+.slider__btn-left::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.slider__btn-left::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.slider__btn-right::after {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.slider__btn-right::before {
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
