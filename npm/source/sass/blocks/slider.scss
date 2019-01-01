@@ -42,6 +42,7 @@
 .slider__preview b {
   color: #fff;
   font-size: 32px;
+  font-weight: bold;
   text-transform: uppercase;
   margin: 0;
 }
@@ -53,7 +54,7 @@
 }
 
 .slider__preview a {
-  background-color: $blue;
+  background-color: $mainColor;
   color: #fff;
   font-size: 14px;
   text-transform: uppercase;
@@ -62,7 +63,7 @@
   transition: background-color .3s;
 
   &:hover {
-    background-color: darken($blue, 10%);
+    background-color: darken($mainColor, 10%);
   }
 }
 
@@ -120,7 +121,7 @@
 
   &::after,
   &::before {
-    background-color: $blue;
+    background-color: $mainColor;
   }
 }
 

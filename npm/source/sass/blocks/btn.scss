@@ -1,7 +1,8 @@
 .btn {
   display: block;
-  border: 1px solid $blue;
-  color: $blue;
+  border: 1px solid $mainColor;
+  color: $mainColor;
+  font-family: "Gotham Pro", sans-serif;
   font-size: 14px;
   font-weight: normal;
   text-align: center;
@@ -12,7 +13,7 @@
     color .3s;
 
   &:hover {
-    background-color: $blue;
+    background-color: $mainColor;
     color: #fff;
   }
 }

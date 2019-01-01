@@ -1,0 +1,50 @@
+.team {
+  background-color: #edf2f6;
+  font-family: "Gotham Pro", sans-serif;
+  padding-bottom: 10px;
+}
+
+.team h2 {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 30px 0 45px;
+}
+
+.team__item {
+  text-align: center;
+}
+
+.team__img-wrapper {
+  border-radius: 50%;
+  height: 125px;
+  width: 125px;
+  margin: 0 auto;
+}
+
+.team__item h3 {
+  color: $mainColor;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 25px 0 10px;
+}
+
+.team__item b {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.team__item hr {
+  border: none;
+  color: #e1e6ea;
+  background-color: #b2b5b9;
+  height: 1px;
+}
+
+.team__item p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+}

@@ -1,0 +1,32 @@
+.advantages {
+  font-family: "Gotham Pro", sans-serif;
+  padding-bottom: 90px;
+}
+
+.advantages h2 {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 40px 0;
+}
+
+.advantages__item {
+  text-align: center;
+}
+
+.advantages__img-wrapper {
+  min-height: 100px;
+  width: 100%;
+}
+
+.advantages__item h3 {
+  color: $mainColor;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.advantages__item p {
+  font-size: 14px;
+  font-weight: 300;
+}

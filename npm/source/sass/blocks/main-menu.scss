@@ -1,5 +1,5 @@
 .main-menu {
-  background-color: $blue;
+  background-color: $mainColor;
   font-family: "Gotham Pro", sans-serif;
 }
 
@@ -10,7 +10,7 @@
 .main-menu__btn {
   border: none;
   position: relative;
-  background: $blue;
+  background: $mainColor;
   color: #fff;
   cursor: pointer;
   font-size: 0;
@@ -33,7 +33,7 @@
   }
 
   &:hover {
-    background-color: darken($blue, 10%);
+    background-color: darken($mainColor, 10%);
   }
 }
 
@@ -59,7 +59,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $red;
+  color: $kazkyrort;
   font-size: 17px;
   text-align: center;
   text-decoration: none;
@@ -67,7 +67,7 @@
   z-index: 0;
 
   &:hover {
-    background-color: darken($blue, 10%);
+    background-color: darken($mainColor, 10%);
   }
 }
 
@@ -78,9 +78,9 @@
   left: 0;
   flex-direction: column;
   align-items: center;
-  background-color: $blue;
-  border-right: 1px solid $blue;
-  border-left: 1px solid $blue;
+  background-color: $mainColor;
+  border-right: 1px solid $mainColor;
+  border-left: 1px solid $mainColor;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -98,7 +98,7 @@
   width: 100%;
 
   &:hover > a {
-    background-color: darken($blue, 10%);
+    background-color: darken($mainColor, 10%);
   }
 }
 
@@ -106,7 +106,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $blue;
+  background-color: $mainColor;
   border-bottom: 1px solid #fff;
   color: #fff;
   font-size: 15px;
@@ -121,7 +121,7 @@
 
 .main-menu__wrapper > li:last-child > a {
   border-bottom: none;
-  color: $red;
+  color: $kazkyrort;
 }
 
 .main-menu__wrapper > li > ul {
@@ -163,7 +163,7 @@
     top: 100%;
     left: 0;
     background-color: #fff;
-    border: 1px solid darken($blue, 10%);
+    border: 1px solid darken($mainColor, 10%);
     border-top: none;
     list-style: none;
     padding: 0;
@@ -173,7 +173,7 @@
 
   .main-menu__wrapper > li > ul > li > a {
     display: block;
-    color: $blue;
+    color: $mainColor;
     font-size: 14px;
     line-height: 18px;
     text-align: center;
@@ -184,7 +184,7 @@
     width: 100%;
 
     &:hover {
-      background-color: $blue;
+      background-color: $mainColor;
       color: #fff;
     }
   }
