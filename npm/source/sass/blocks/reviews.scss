@@ -1,0 +1,64 @@
+.reviews {
+  font-family: "Gotham Pro", sans-serif;
+  padding-bottom: 25px;
+}
+
+.reviews h2 {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 40px 0;
+}
+
+.review__list {
+  justify-content: space-around;
+}
+
+.reviews__item {
+  padding-bottom: 75px;
+}
+
+.reviews__title {
+  display: flex;
+  align-items: center;
+}
+
+.reviews__title h3 {
+  color: $mainColor;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  margin-left: 70px;
+}
+
+.reviews__item b {
+  display: block;
+  color: $mainColor;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.reviews__item time {
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.reviews__item p {
+  line-height: 22px;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 20px 0 0;
+}
+
+.reviews hr {
+  border: none;
+  color: #e1e6ea;
+  background-color: #b2b5b9;
+  height: 2px;
+  margin: 0;
+}
