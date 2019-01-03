@@ -13,69 +13,53 @@
 
 
 (function () {
-  var slider = document.querySelector('.slider');
-  var slideList = slider.querySelectorAll('.slider__item');
-  var slideControl = slider.querySelector('.slider__control');
-  var counter;
+  var slider = document.querySelector('.carousel');
+  var slideList = slider.querySelectorAll('.carousel__item');
+  var slideControl = slider.querySelector('.carousel__control');
   var maxSlide = 2; // отсчет с нуля
+  var counter;
   var slideNumber;
   var widthSlider;
+  var locked = true;
 
   var slideMoveHandler = function (evt) {
     evt.preventDefault();
     var target = evt.target;
-    if (target.classList.contains('slider__btn-left')) {
+    if (target.classList.contains('carousel__btn-left')) {
       for (var i = 0; i < slideList.length; i++) {
-        if (slideList[i].classList.contains('slider__item--active') && (i != 0)) {
+        if (slideList[i].classList.contains('carousel__item--active') && (i != 0) && locked) {
           counter = i;
           slideNumber = -1;
           widthSlider = parseFloat(getComputedStyle(slider).width);
           slideMove();
-        } else if (slideList[i].classList.contains('slider__item--active') && (i == 0)) {
+          return;
+        } else if (slideList[i].classList.contains('carousel__item--active') && (i == 0) && locked) {
           counter = i;
           slideNumber = maxSlide;
           widthSlider = parseFloat(getComputedStyle(slider).width);
           slideMove();
+          return;
         }
       }
     }
 
-    if (target.classList.contains('slider__btn-right')) {
+    if (target.classList.contains('carousel__btn-right')) {
       for (var i = 0; i < slideList.length; i++) {
-        if (slideList[i].classList.contains('slider__item--active') && (i != maxSlide)) {
+        if (slideList[i].classList.contains('carousel__item--active') && (i != maxSlide) && locked) {
           counter = i;
           slideNumber = 1;
           widthSlider = parseFloat(getComputedStyle(slider).width) * -1;
           slideMove();
-        } else if (slideList[i].classList.contains('slider__item--active') && (i == maxSlide)) {
+          return;
+        } else if (slideList[i].classList.contains('carousel__item--active') && (i == maxSlide) && locked) {
           counter = i;
           slideNumber = maxSlide * (-1);
           widthSlider = parseFloat(getComputedStyle(slider).width) * -1;
           slideMove();
+          return;
         }
       }
     }
-  }
-
-  var slideMove = function () {
-    slideList[counter + slideNumber].style.transform = 'translateX(' + (widthSlider * -1) + 'px)';
-    setTimeout(function () {
-      slideList[counter + slideNumber].style.display = 'block';
-      setTimeout(function () {
-        slideList[counter].classList.remove('slider__item--active');
-        slideList[counter].style.transform = 'translateX(' + widthSlider + 'px)';
-        slideList[counter + slideNumber].style.transform = 'translateX(0)';
-        setTimeout(function () {
-          slideList[counter].style.display = 'none';
-          slideList[counter + slideNumber].classList.add('slider__item--active');
-          slideList[counter].style.transform = 'translateX(' + 0 + 'px)';
-        }, 1000);
-      }, 100);
-    }, 100);
-  }
-
-  if (slideControl) {
-    slideControl.addEventListener('click', slideMoveHandler);
   }
 
   var moveSlideTimer = function () {
@@ -87,19 +71,43 @@
         clearInterval(timer);
         timer = setInterval(moveSlideTimer, 5000);
       }
-      if (slideList[i].classList.contains('slider__item--active') && (i != maxSlide)) {
+      if (slideList[i].classList.contains('carousel__item--active') && (i != maxSlide) && locked) {
         counter = i;
         slideNumber = 1;
         widthSlider = parseFloat(getComputedStyle(slider).width) * -1;
         slideMove();
-      } else if (slideList[i].classList.contains('slider__item--active') && (i == maxSlide)) {
+        return;
+      } else if (slideList[i].classList.contains('carousel__item--active') && (i == maxSlide) && locked) {
         counter = i;
         slideNumber = maxSlide * (-1);
         widthSlider = parseFloat(getComputedStyle(slider).width) * -1;
         slideMove();
+        return;
       }
     }
   }
 
+  var slideMove = function () {
+    locked = false;
+    slideList[counter + slideNumber].style.transform = 'translateX(' + (widthSlider * -1) + 'px)';
+    setTimeout(function () {
+      slideList[counter + slideNumber].classList.add('carousel__item--active');
+      setTimeout(function () {
+        slideList[counter].style.transform = 'translateX(' + widthSlider + 'px)';
+        slideList[counter + slideNumber].style.transform = 'translateX(0)';
+        setTimeout(function () {
+          slideList[counter].classList.remove('carousel__item--active');
+          slideList[counter + slideNumber].classList.add('carousel__item--active');
+          slideList[counter].style.transform = 'translateX(' + 0 + 'px)';
+          locked = true;
+        }, 1000);
+      }, 50);
+    }, 50);
+  }
+
   var timer = setInterval(moveSlideTimer, 5000);
+
+  if (slideControl) {
+    slideControl.addEventListener('click', slideMoveHandler);
+  }
 })();

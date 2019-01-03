@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
@@ -62,37 +63,36 @@
     </div>
   </div>
 
-  <section class="slider">
-    <div class="slider__list">
-      <div class="slider__item  slider__item--active">
+  <section id="actionCarousel" class="action  carousel">
+    <div class="action__list  carousel__list">
+      <div class="action__item  carousel__item  carousel__item--active">
         <img src="img/slide1.jpg" alt="">
-        <div class="slider__preview">
+        <div class="action__text  carousel__preview">
           <b>Спецпредложение</b>
           <p>Описание спецпредложения</p>
           <a href="">Подробнее</a>
         </div>
       </div>
-      <div class="slider__item" style="display: none;">
+      <div class="action__item  carousel__item">
         <img src="img/slide1.jpg" alt="">
-        <div class="slider__preview">
+        <div class="action__text  carousel__preview">
           <b>Спецпредложение2</b>
           <p>Описание спецпредложения</p>
           <a href="">Подробнее</a>
         </div>
       </div>
-      <div class="slider__item" style="display: none;">
+      <div class="action__item  carousel__item">
         <img src="img/slide1.jpg" alt="">
-        <div class="slider__preview">
+        <div class="action__text  carousel__preview">
           <b>Спецпредложение3</b>
           <p>Описание спецпредложения</p>
           <a href="">Подробнее</a>
         </div>
       </div>
     </div>
-
-    <div class="slider__control">
-      <a class="slider__btn-left" href="" role="button">Предыдущий слайд</a>
-      <a class="slider__btn-right" href="" role="button">Следующий слайд</a>
+    <div class="carousel__control">
+      <a class="carousel__btn-left" href="">Предыдущий слайд</a>
+      <a class="carousel__btn-right" href="">Следующий слайд</a>
     </div>
   </section>
 
@@ -166,27 +166,33 @@
     </div>
   </section>
 
-  <section class="reviews container">
-    <div class="review__list row">
+  <section id="reviewsCarousel" class="reviews container carousel">
+    <div class="row carousel__list">
       <h2 class="col-12">Отзывы</h2>
-      <article class="reviews__item col-12 col-lg-5">
-        <div class="reviews__title">
-          <img src="img/teamPhoto.png" alt="">
-          <h3>Тайланд</h3>
-        </div>
-        <b>Иван Иванов</b>
-        <time>12.09.2018</time>
-        <p>Восприятие представляет собой конформизм. В заключении добавлю, анима иллюстрирует экзистенциальный бихевиоризм. Закон прочно отражает депрессивный контраст, тем не менее как только ортодоксальность окончательно возобладает, даже эта маленькая лазейка будет закрыта.</p>
-      </article>
-      <article class="reviews__item col-12 col-lg-5">
-        <div class="reviews__title">
-          <img src="img/teamPhoto.png" alt="">
-          <h3>Тайланд</h3>
-        </div>
-        <b>Иван Иванов</b>
-        <time>12.09.2018</time>
-        <p>Восприятие представляет собой конформизм. В заключении добавлю, анима иллюстрирует экзистенциальный бихевиоризм. Закон прочно отражает депрессивный контраст, тем не менее как только ортодоксальность окончательно возобладает, даже эта маленькая лазейка будет закрыта.</p>
-      </article>
+      <div class="carousel__control">
+        <a class="carousel__btn-left" href="">Предыдущий слайд</a>
+        <a class="carousel__btn-right" href="">Следующий слайд</a>
+      </div>
+      <div class="reviews__list  col-12 row  carousel__item  carousel__item--active">
+        <article class="reviews__item col-16 col-lg-5">
+          <div class="reviews__title">
+            <img src="img/teamPhoto.png" alt="">
+            <h3>Тайланд</h3>
+          </div>
+          <b>Иван Иванов</b>
+          <time>12.09.2018</time>
+          <p>Восприятие представляет собой конформизм. В заключении добавлю, анима иллюстрирует экзистенциальный бихевиоризм. Закон прочно отражает депрессивный контраст, тем не менее как только ортодоксальность окончательно возобладает, даже эта маленькая лазейка будет закрыта.</p>
+        </article>
+        <article class="reviews__item col-16 col-lg-5">
+          <div class="reviews__title">
+            <img src="img/teamPhoto.png" alt="">
+            <h3>Тайланд</h3>
+          </div>
+          <b>Иван Иванов</b>
+          <time>12.09.2018</time>
+          <p>Восприятие представляет собой конформизм. В заключении добавлю, анима иллюстрирует экзистенциальный бихевиоризм. Закон прочно отражает депрессивный контраст, тем не менее как только ортодоксальность окончательно возобладает, даже эта маленькая лазейка будет закрыта.</p>
+        </article>
+      </div>
       <hr class="col-12">
     </div>
   </section>

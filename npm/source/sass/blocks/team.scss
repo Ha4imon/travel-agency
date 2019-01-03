@@ -1,7 +1,7 @@
 .team {
   background-color: #edf2f6;
   font-family: "Gotham Pro", sans-serif;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
 }
 
 .team h2 {
@@ -13,6 +13,11 @@
 
 .team__item {
   text-align: center;
+  margin-bottom: 65px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .team__img-wrapper {
@@ -47,4 +52,22 @@
   font-size: 14px;
   font-weight: 300;
   line-height: 22px;
+  margin-bottom: 0;
+}
+
+
+@media (min-width: $tabletWidth) {
+  .team__item {
+
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+@media (min-width: $laptopWidth) {
+  .team__item {
+    margin-bottom: 0;
+  }
 }
