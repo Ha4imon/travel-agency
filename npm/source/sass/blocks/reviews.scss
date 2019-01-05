@@ -36,22 +36,12 @@
   }
 }
 
-
-.reviews__wrapper {
-  position: relative;
-  min-height: 400px;
-  width: 100%;
-}
-
-.reviews__list {
-  display: flex;
-  justify-content: space-around;
-  padding: 0 25px;
-  margin: 0;
-}
-
 .reviews__item {
-  padding: 0 15px 75px;
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 40px 75px;
+  flex-direction: column;
 }
 
 .reviews__title {
@@ -102,7 +92,7 @@
 
 @media (min-width: $laptopWidth) {
   .reviews__item {
-    padding: 0;
-    padding-bottom: 75px;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
