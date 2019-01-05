@@ -13,101 +13,134 @@
 
 
 (function () {
-  var slider = document.querySelector('.carousel');
-  var slideList = slider.querySelectorAll('.carousel__item');
-  var slideControl = slider.querySelector('.carousel__control');
-  var maxSlide = 2; // отсчет с нуля
-  var counter;
-  var slideNumber;
-  var widthSlider;
-  var locked = true;
+  var carousel = document.querySelectorAll('.carousel');
 
-  var slideMoveHandler = function (evt) {
-    evt.preventDefault();
+  var slideMoveHandler = function (carouselSlide, maxSlide, widthCarousel, locked, evt) {
+    var counter;
+    var nextSlide;
+    var sizeTransform = widthCarousel;
     var target = evt.target;
+
     if (target.classList.contains('carousel__btn-left')) {
-      for (var i = 0; i < slideList.length; i++) {
-        if (slideList[i].classList.contains('carousel__item--active') && (i != 0) && locked) {
+      for (var i = 0; i < carouselSlide.length; i++) {
+        if (carouselSlide[i].classList.contains('carousel__item--active') && (i != 0) && locked) {
           counter = i;
-          slideNumber = -1;
-          widthSlider = parseFloat(getComputedStyle(slider).width);
-          slideMove();
+          nextSlide = -1;
+          sizeTransform *= 1;
+          slideMove(carouselSlide, maxSlide, sizeTransform, locked, counter, nextSlide, widthCarousel);
           return;
-        } else if (slideList[i].classList.contains('carousel__item--active') && (i == 0) && locked) {
+        } else if (carouselSlide[i].classList.contains('carousel__item--active') && (i == 0) && locked) {
           counter = i;
-          slideNumber = maxSlide;
-          widthSlider = parseFloat(getComputedStyle(slider).width);
-          slideMove();
+          nextSlide = maxSlide;
+          sizeTransform *= 1;
+          slideMove(carouselSlide, maxSlide, sizeTransform, locked, counter, nextSlide, widthCarousel);
           return;
         }
       }
     }
 
     if (target.classList.contains('carousel__btn-right')) {
-      for (var i = 0; i < slideList.length; i++) {
-        if (slideList[i].classList.contains('carousel__item--active') && (i != maxSlide) && locked) {
+      for (var i = 0; i < carouselSlide.length; i++) {
+        if (carouselSlide[i].classList.contains('carousel__item--active') && (i != maxSlide) && locked) {
           counter = i;
-          slideNumber = 1;
-          widthSlider = parseFloat(getComputedStyle(slider).width) * -1;
-          slideMove();
+          nextSlide = 1;
+          sizeTransform *= -1;
+          slideMove(carouselSlide, maxSlide, sizeTransform, locked, counter, nextSlide, widthCarousel);
           return;
-        } else if (slideList[i].classList.contains('carousel__item--active') && (i == maxSlide) && locked) {
+        } else if (carouselSlide[i].classList.contains('carousel__item--active') && (i == maxSlide) && locked) {
           counter = i;
-          slideNumber = maxSlide * (-1);
-          widthSlider = parseFloat(getComputedStyle(slider).width) * -1;
-          slideMove();
+          nextSlide = maxSlide * -1;
+          sizeTransform *= -1;
+          slideMove(carouselSlide, maxSlide, sizeTransform, locked, counter, nextSlide, widthCarousel);
           return;
         }
       }
     }
   }
 
-  var moveSlideTimer = function () {
-    for (var i = 0; i < slideList.length; i++) {
-      slider.onmouseover = function () {
-        clearInterval(timer);
-      }
-      slider.onmouseout = function () {
-        clearInterval(timer);
-        timer = setInterval(moveSlideTimer, 5000);
-      }
-      if (slideList[i].classList.contains('carousel__item--active') && (i != maxSlide) && locked) {
+  var moveSlideTimer = function (carouselSlide, maxSlide, widthCarousel, locked) {
+    var counter;
+    var nextSlide;
+    var sizeTransform = widthCarousel;
+
+    for (var i = 0; i < carouselSlide.length; i++) {
+      if (carouselSlide[i].classList.contains('carousel__item--active') && (i != maxSlide) && locked) {
         counter = i;
-        slideNumber = 1;
-        widthSlider = parseFloat(getComputedStyle(slider).width) * -1;
-        slideMove();
+        nextSlide = 1;
+        sizeTransform *= -1;
+        slideMove(carouselSlide, maxSlide, sizeTransform, locked, counter, nextSlide, widthCarousel);
         return;
-      } else if (slideList[i].classList.contains('carousel__item--active') && (i == maxSlide) && locked) {
+      } else if (carouselSlide[i].classList.contains('carousel__item--active') && (i == maxSlide) && locked) {
         counter = i;
-        slideNumber = maxSlide * (-1);
-        widthSlider = parseFloat(getComputedStyle(slider).width) * -1;
-        slideMove();
+        nextSlide = maxSlide * (-1);
+        sizeTransform *= -1;
+        slideMove(carouselSlide, maxSlide, sizeTransform, locked, counter, nextSlide, widthCarousel);
         return;
       }
     }
   }
 
-  var slideMove = function () {
+  var slideMove = function (carouselSlide, maxSlide, sizeTransform, locked, counter, nextSlide, widthCarousel) {
     locked = false;
-    slideList[counter + slideNumber].style.transform = 'translateX(' + (widthSlider * -1) + 'px)';
+    carouselSlide[counter + nextSlide].style.transform = 'translateX(' + (sizeTransform * -1) + 'px)';
     setTimeout(function () {
-      slideList[counter + slideNumber].classList.add('carousel__item--active');
+      carouselSlide[counter + nextSlide].classList.add('carousel__item--active');
       setTimeout(function () {
-        slideList[counter].style.transform = 'translateX(' + widthSlider + 'px)';
-        slideList[counter + slideNumber].style.transform = 'translateX(0)';
+        carouselSlide[counter].style.transform = 'translateX(' + sizeTransform + 'px)';
+        carouselSlide[counter + nextSlide].style.transform = 'translateX(0)';
         setTimeout(function () {
-          slideList[counter].classList.remove('carousel__item--active');
-          slideList[counter + slideNumber].classList.add('carousel__item--active');
-          slideList[counter].style.transform = 'translateX(' + 0 + 'px)';
+          carouselSlide[counter].classList.remove('carousel__item--active');
+          carouselSlide[counter + nextSlide].classList.add('carousel__item--active');
+          carouselSlide[counter].style.transform = 'translateX(' + 0 + 'px)';
           locked = true;
         }, 1000);
       }, 50);
     }, 50);
   }
 
-  var timer = setInterval(moveSlideTimer, 5000);
+  var findCarouselSlide = function () {
+    var carouselSlide;
+    var carouselControl;
+    var maxSlide = [];
+    var locked = [];
 
-  if (slideControl) {
-    slideControl.addEventListener('click', slideMoveHandler);
+    for (var i = 0; i < carousel.length; i++) {
+      carouselSlide = carousel[i].querySelectorAll('.carousel__item');
+      carouselControl = carousel[i].querySelector('.carousel__control');
+      maxSlide[i] = carouselSlide.length - 1;
+      locked[i] = true;
+      doSomething(carousel[i], carouselSlide, maxSlide[i], carouselControl, locked[i]);
+    }
   }
+
+  var doSomething = function (carousel, carouselSlide, maxSlide, carouselControl, locked) {
+    var widthCarousel = parseFloat(getComputedStyle(carousel.querySelector('.carousel__list')).width);
+
+    var timer = setInterval(function () {
+      moveSlideTimer(carouselSlide, maxSlide, widthCarousel, locked);
+    }, 5000);
+
+    carousel.onmouseover = function () {
+      clearInterval(timer);
+    }
+    carousel.onmouseout = function () {
+      clearInterval(timer);
+      timer = setInterval(function () {
+        moveSlideTimer(carouselSlide, maxSlide, widthCarousel, locked);
+      }, 5000);
+    }
+
+
+    if (carouselControl) {
+      carouselControl.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        slideMoveHandler(carouselSlide, maxSlide, widthCarousel, locked, evt);
+      });
+    }
+  }
+
+  window.onload = function () {
+    findCarouselSlide();
+  }
+
 })();

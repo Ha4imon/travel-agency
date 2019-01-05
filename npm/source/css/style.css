@@ -638,7 +638,7 @@ html {
   overflow: hidden; }
 
 .carousel__item {
-  display: none;
+  display: none !important;
   position: absolute;
   top: 0;
   left: 0;
@@ -649,7 +649,7 @@ html {
   transition: transform 1s, -webkit-transform 1s; }
 
 .carousel__item--active {
-  display: block; }
+  display: flex !important; }
 
 .carousel__control {
   display: flex;
@@ -826,8 +826,12 @@ html {
 .reviews .carousel__btn-right:hover::before {
   background-color: #004d81; }
 
-.reviews__list {
+.reviews__wrapper {
   position: relative;
+  min-height: 400px;
+  width: 100%; }
+
+.reviews__list {
   display: flex;
   justify-content: space-around;
   padding: 0 25px;

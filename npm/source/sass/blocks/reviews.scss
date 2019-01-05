@@ -36,8 +36,14 @@
   }
 }
 
-.reviews__list {
+
+.reviews__wrapper {
   position: relative;
+  min-height: 400px;
+  width: 100%;
+}
+
+.reviews__list {
   display: flex;
   justify-content: space-around;
   padding: 0 25px;
