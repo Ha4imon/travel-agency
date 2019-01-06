@@ -378,7 +378,8 @@ html {
 
 .action img {
   -o-object-fit: cover;
-     object-fit: cover; }
+     object-fit: cover;
+  width: 100%; }
 
 .action__item {
   position: relative;
@@ -424,9 +425,10 @@ html {
 
 .carousel__list {
   display: flex;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s; }
+  transition: -webkit-transform .6s;
+  transition: transform .6s;
+  transition: transform .6s, -webkit-transform .6s;
+  max-width: 100%; }
 
 .carousel__item {
   display: flex; }
@@ -607,11 +609,10 @@ html {
   background-color: #004d81; }
 
 .reviews__item {
-  box-sizing: border-box;
+  flex-direction: column;
   flex: 0 0 100%;
-  max-width: 100%;
   padding: 0 40px 75px;
-  flex-direction: column; }
+  max-width: 100%; }
 
 .reviews__title {
   display: flex;
@@ -920,10 +921,7 @@ html {
   .advantages__item {
     margin-bottom: 0; }
   .team__item {
-    margin-bottom: 0; }
-  .reviews__item {
-    flex: 0 0 50%;
-    max-width: 50%; } }
+    margin-bottom: 0; } }
 
 @media (min-width: 1200px) {
   .container {
@@ -973,4 +971,8 @@ html {
     flex: 0 0 100%;
     max-width: 100%; }
   .main-header__contact p {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .reviews__item {
+    padding: 0 40px 75px;
+    flex: 0 0 50%;
+    max-width: 50%; } }

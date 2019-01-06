@@ -5,7 +5,8 @@
 
 .carousel__list {
   display: flex;
-  transition: transform 1s;
+  transition: transform .6s;
+  max-width: 100%;
 }
 
 .carousel__item {
