@@ -399,7 +399,7 @@ html {
 
 .action__text b {
   color: #fff;
-  font-size: 22px;
+  font-size: 23px;
   font-weight: bold;
   text-transform: uppercase;
   margin: 0; }
@@ -407,15 +407,15 @@ html {
 .action__text p {
   color: #fff;
   font-size: 16px;
-  margin: 20px 0 50px; }
+  margin: 10px 0 40px; }
 
 .action__text a {
   background-color: #004d81;
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 30px;
+  padding: 10px 20px;
   transition: background-color .3s; }
   .action__text a:hover {
     background-color: #002f4e; }
@@ -809,7 +809,11 @@ html {
   .action__text b {
     font-size: 28px; }
   .action__text p {
-    font-size: 19px; }
+    font-size: 19px;
+    margin: 20px 0 50px; }
+  .action__text a {
+    font-size: 15px;
+    padding: 15px 30px; }
   .advantages__item:nth-last-child(-n+2) {
     margin-bottom: 0; }
   .team__item:nth-last-child(-n+2) {
