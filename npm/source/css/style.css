@@ -392,20 +392,21 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 0 15px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center; }
 
 .action__text b {
   color: #fff;
-  font-size: 32px;
+  font-size: 22px;
   font-weight: bold;
   text-transform: uppercase;
   margin: 0; }
 
 .action__text p {
   color: #fff;
-  font-size: 19px;
+  font-size: 16px;
   margin: 20px 0 50px; }
 
 .action__text a {
@@ -616,15 +617,14 @@ html {
 
 .reviews__title {
   display: flex;
+  flex-direction: column;
   align-items: center; }
 
 .reviews__title h3 {
   color: #004d81;
   font-size: 24px;
   font-weight: bold;
-  text-transform: uppercase;
-  margin: 0;
-  margin-left: 70px; }
+  text-transform: uppercase; }
 
 .reviews__item b {
   display: block;
@@ -806,10 +806,19 @@ html {
     .main-menu__wrapper > li > ul > li > a:hover {
       background-color: #004d81;
       color: #fff; }
+  .action__text b {
+    font-size: 28px; }
+  .action__text p {
+    font-size: 19px; }
   .advantages__item:nth-last-child(-n+2) {
     margin-bottom: 0; }
   .team__item:nth-last-child(-n+2) {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .reviews__title {
+    flex-direction: row; }
+  .reviews__title h3 {
+    margin: 0;
+    margin-left: 70px; } }
 
 @media (min-width: 992px) {
   .container {
@@ -918,6 +927,8 @@ html {
     font-size: 20px; }
   .main-header__contact a {
     font-size: 14px; }
+  .action__text b {
+    font-size: 32px; }
   .advantages__item {
     margin-bottom: 0; }
   .team__item {

@@ -45,6 +45,7 @@
 
 .reviews__title {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -53,8 +54,7 @@
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 0;
-  margin-left: 70px;
+
 }
 
 .reviews__item b {
@@ -87,6 +87,17 @@
   height: 2px;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: $tabletWidth) {
+  .reviews__title {
+    flex-direction: row;
+  }
+
+  .reviews__title h3 {
+    margin: 0;
+    margin-left: 70px;
+  }
 }
 
 @media (min-width: $desktopWidth) {
