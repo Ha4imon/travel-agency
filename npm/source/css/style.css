@@ -425,9 +425,9 @@ html {
 
 .carousel__list {
   display: flex;
-  transition: -webkit-transform .6s;
-  transition: transform .6s;
-  transition: transform .6s, -webkit-transform .6s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
   max-width: 100%; }
 
 .carousel__item {
