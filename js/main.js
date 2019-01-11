@@ -190,3 +190,35 @@
     }
   }
 })();
+
+
+(function () {
+  var body = document.querySelector('body');
+  var wrapper = body.querySelector('.partners__wrapper');
+  var counter = 0;
+  var locked = false;
+
+  function tranform() {
+    if (body.clientWidth + counter < wrapper.scrollWidth && !locked) {
+      counter += 2;
+      wrapper.style.transform = 'translateX(' + -counter + 'px)';
+    } else {
+      locked = true;
+    }
+
+    if ((counter > 0) && locked) {
+      counter -= 2;
+      wrapper.style.transform = 'translateX(' + -counter + 'px)';
+    } else {
+      locked = false;
+    }
+
+    setTimeout(function () {
+      tranform();
+    }, 60);
+  }
+
+  if (wrapper) {
+    tranform();
+  }
+})();

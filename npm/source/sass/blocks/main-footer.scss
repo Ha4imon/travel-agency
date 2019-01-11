@@ -1,0 +1,147 @@
+.main-footer {
+  background-color: $mainColor;
+  font-family: "Gotham Pro", sans-serif;
+  padding: 40px 0;
+}
+
+.main-footer__wrapper {
+  justify-content: space-between;
+}
+
+.main-footer__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-footer__menu ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.main-footer__menu ul li {
+  margin-bottom: 6px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.main-footer__menu ul li a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.main-footer__social {
+  display: flex;
+  align-items: center;
+}
+
+.main-footer__social ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 25px auto;
+  width: 100%;
+  max-width: 200px;
+}
+
+.main-footer__social ul li a {
+  position: relative;
+  display: block;
+  font-size: 0;
+  width: 30px;
+  height: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform .3s;
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover::before {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.main-footer__vk::before {
+  background-image: url(../img/vk.png);
+}
+
+.main-footer__viber::before {
+  background-image: url(../img/viber.png);
+}
+
+.main-footer__inst::before {
+  background-image: url(../img/inst.png);
+}
+
+.main-footer__contact {
+  text-align: center;
+}
+
+.main-footer__contact p {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.main-footer__contact a {
+  color: #fff;
+  font-size: 15px;
+}
+
+@media (min-width: $tabletWidth) {
+  .main-footer__logo {
+    justify-content: flex-start;
+    margin-bottom: 50px;
+  }
+
+  .main-footer__menu ul {
+    text-align: right;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  .main-footer__contact {
+    text-align: left;
+  }
+
+  .main-footer__contact p {
+    font-size: 22px;
+    text-align: right;
+  }
+
+  .main-footer__contact a {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: $laptopWidth) {
+  .main-footer__logo {
+    margin: 0;
+  }
+
+  .main-footer__menu ul {
+    text-align: left;
+    margin: 0;
+  }
+}

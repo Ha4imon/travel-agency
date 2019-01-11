@@ -1,0 +1,34 @@
+.partners {
+  font-family: "Gotham Pro", sans-serif;
+  text-align: center;
+  padding-bottom: 55px;
+  overflow: hidden;
+}
+
+.partners h3 {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 40px auto;
+}
+
+.partners__wrapper {
+  list-style: none;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 30px;
+  transition: transform .3s;
+}
+
+.partners__wrapper li {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+  margin-right: 15px;
+
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

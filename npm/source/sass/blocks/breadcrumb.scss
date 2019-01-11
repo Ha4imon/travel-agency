@@ -1,0 +1,42 @@
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.breadcrumb li {
+  position: relative;
+  color: $mainColor;
+  font-size: 14px;
+  font-weight: 300;
+  margin-right: 30px;
+  
+  &:last-child {
+    margin-right: 0;
+    
+    &::before {
+      content: none;
+    }
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    background-image: url(../img/rightArrow.png);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.breadcrumb li a {
+  color: $mainColor;
+  font-weight: normal;
+  
+  &:hover {
+    color: #000;
+  }
+}

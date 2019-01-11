@@ -1,0 +1,59 @@
+.contacts {
+  font-family: "Gotham Pro", sans-serif;
+}
+
+.contacts__wrapper h1 {
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.contacts__wrapper b {
+  display: block;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 50px 0;
+
+}
+
+.contacts__wrapper b span {
+  color: $mainColor;
+}
+
+.contacts__wrapper h2 {
+  font-size: 21px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.contacts__wrapper ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 55px;
+}
+
+.contacts__wrapper ul li {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 25px;
+  padding-left: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-image: url(../img/checkbox.png);
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+  }
+}
