@@ -19,6 +19,13 @@
   font-weight: normal;
   font-style: normal; }
 
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Gotham Pro", sans-serif; }
+
 img {
   max-width: 100%;
   vertical-align: middle; }
@@ -213,12 +220,15 @@ html {
 .ml-auto {
   margin-left: auto !important; }
 .main-header {
-  font-family: "Gotham Pro", sans-serif;
   padding-top: 15px;
   padding-bottom: 15px; }
 
+.main-header > .row {
+  align-items: center; }
+
 .main-header__logo {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   font-size: 0;
   margin-bottom: 15px; }
 
@@ -252,7 +262,6 @@ html {
   display: block;
   border: 1px solid #004d81;
   color: #004d81;
-  font-family: "Gotham Pro", sans-serif;
   font-size: 14px;
   font-weight: normal;
   text-align: center;
@@ -265,8 +274,7 @@ html {
     color: #fff; }
 
 .main-menu {
-  background-color: #004d81;
-  font-family: "Gotham Pro", sans-serif; }
+  background-color: #004d81; }
 
 .main-menu__row {
   position: relative; }
@@ -376,7 +384,7 @@ html {
   display: none; }
 
 .action {
-  font-family: "Gotham Pro", sans-serif; }
+  flex-shrink: 0; }
 
 .action img {
   -o-object-fit: cover;
@@ -508,7 +516,6 @@ html {
           transform: translate(-50%, -50%) rotate(-135deg); }
 
 .advantages {
-  font-family: "Gotham Pro", sans-serif;
   padding-bottom: 90px; }
 
 .advantages h2 {
@@ -539,7 +546,6 @@ html {
 
 .team {
   background-color: #edf2f6;
-  font-family: "Gotham Pro", sans-serif;
   padding-bottom: 40px; }
 
 .team h2 {
@@ -585,8 +591,8 @@ html {
   margin-bottom: 0; }
 
 .reviews {
-  font-family: "Gotham Pro", sans-serif;
-  padding-bottom: 25px; }
+  padding-bottom: 25px;
+  flex-shrink: 0; }
 
 .reviews h2 {
   font-size: 24px;
@@ -656,11 +662,14 @@ html {
   margin: 0;
   padding: 0; }
 
+.reviews__btn {
+  margin: 30px auto 0; }
+
 .partners {
-  font-family: "Gotham Pro", sans-serif;
   text-align: center;
   padding-bottom: 55px;
-  overflow: hidden; }
+  overflow: hidden;
+  flex-shrink: 0; }
 
 .partners h3 {
   font-size: 24px;
@@ -688,7 +697,6 @@ html {
 
 .main-footer {
   background-color: #004d81;
-  font-family: "Gotham Pro", sans-serif;
   padding: 40px 0; }
 
 .main-footer__wrapper {
@@ -777,9 +785,6 @@ html {
 .main-footer__contact a {
   color: #fff;
   font-size: 15px; }
-
-.contacts {
-  font-family: "Gotham Pro", sans-serif; }
 
 .contacts__wrapper h1 {
   font-size: 24px;
@@ -914,6 +919,82 @@ html {
 .map__time {
   background-image: url(../img/contactsImg4.png); }
 
+.link-list {
+  flex-grow: 1;
+  padding-bottom: 30px; }
+
+.link-list__item {
+  display: block;
+  border: 1px solid #004d81;
+  color: #004d81;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 30px;
+  transition: background-color .3s, color .3s; }
+  .link-list__item:hover {
+    background: #003e68;
+    color: #fff; }
+
+.link-list__title {
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 10px 0 20px; }
+
+.link-list img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 150px; }
+
+.feedback h1 {
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px; }
+
+.feedback__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px; }
+
+.feedback__name {
+  flex-shrink: 0;
+  text-align: center;
+  width: 165px; }
+
+.feedback__name b {
+  display: block;
+  color: #004d81;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 10px 0; }
+
+.feedback__name time {
+  font-size: 14px;
+  font-weight: 300; }
+
+.feedback__text {
+  margin-left: 20px; }
+
+.feedback__text h2 {
+  color: #004d81;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.feedback__text p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px; }
+
+.feedback-form {
+  background-image: url(../img/bgReviews.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px; }
@@ -1012,7 +1093,7 @@ html {
   .main-header__logo {
     margin-bottom: 0; }
   .main-header__logo img {
-    width: 49%; }
+    width: 50%; }
   .main-header .main-header__btn {
     font-size: 12px;
     padding: 15px; }
@@ -1096,7 +1177,12 @@ html {
     font-size: 22px;
     text-align: right; }
   .main-footer__contact a {
-    font-size: 15px; } }
+    font-size: 15px; }
+  .feedback__item {
+    flex-direction: row;
+    align-items: stretch; }
+  .feedback__text h2 {
+    margin-top: 0; } }
 
 @media (min-width: 992px) {
   .container {

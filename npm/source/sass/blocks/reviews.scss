@@ -1,6 +1,6 @@
 .reviews {
-  font-family: "Gotham Pro", sans-serif;
   padding-bottom: 25px;
+  flex-shrink: 0;
 }
 
 .reviews h2 {
@@ -87,6 +87,10 @@
   height: 2px;
   margin: 0;
   padding: 0;
+}
+
+.reviews__btn {
+  margin: 30px auto 0;
 }
 
 @media (min-width: $tabletWidth) {

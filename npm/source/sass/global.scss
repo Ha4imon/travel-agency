@@ -28,6 +28,14 @@
   font-style: normal;
 }
 
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Gotham Pro", sans-serif;
+}
+
 img {
   max-width: 100%;
   vertical-align: middle;

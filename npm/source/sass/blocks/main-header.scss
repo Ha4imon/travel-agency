@@ -1,11 +1,15 @@
 .main-header {
-  font-family: "Gotham Pro", sans-serif;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
+.main-header > .row {
+  align-items: center;
+}
+
 .main-header__logo {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   font-size: 0;
   margin-bottom: 15px;
 }
@@ -51,7 +55,7 @@
   }
 
   .main-header__logo img {
-    width: 49%;
+    width: 50%;
   }
 
   .main-header .main-header__btn {

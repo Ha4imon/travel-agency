@@ -1,0 +1,33 @@
+.link-list {
+  flex-grow: 1;
+  padding-bottom: 30px;
+}
+
+.link-list__item {
+  display: block;
+  border: 1px solid $mainColor;
+  color: $mainColor;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 30px;
+  transition: background-color .3s,
+    color .3s;
+
+  &:hover {
+    background: darken($mainColor, 5%);
+    color: #fff;
+  }
+}
+
+.link-list__title {
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 10px 0 20px;
+}
+
+.link-list img {
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+}
