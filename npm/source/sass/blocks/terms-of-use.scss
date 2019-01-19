@@ -1,0 +1,36 @@
+.terms-of-use {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.terms-of-use p {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  margin: 15px 0;
+}
+
+.terms-of-use ul {
+  padding-left: 30px;
+  list-style: none;
+  margin: 15px 0;
+}
+
+.terms-of-use ul li {
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+  margin-bottom: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: -28px;
+    border-radius: 50%;
+    background-color: $mainColor;
+    width: 6px;
+    height: 6px;
+  }
+}

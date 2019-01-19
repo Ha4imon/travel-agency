@@ -1,0 +1,30 @@
+.team-page {
+  margin-top: 25px;
+}
+
+.team-page div.team__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.team-page .team__img-wrapper {
+  flex-shrink: 0;
+}
+
+@media (min-width: $tabletWidth) {
+  .team-page div.team__item {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .team-page .team__img-wrapper {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 65px;
+  }
+
+  .team__wrapper h3 {
+    margin-top: 0;
+  }
+}

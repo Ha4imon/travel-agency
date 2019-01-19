@@ -49,12 +49,17 @@
   align-items: center;
 }
 
+.reviews__img-wrapper {
+  border-radius: 50%;
+  height: 125px;
+  width: 125px;
+}
+
 .reviews__title h3 {
   color: $mainColor;
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
-
 }
 
 .reviews__item b {

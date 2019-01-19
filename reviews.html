@@ -74,11 +74,13 @@
         <li><a href="index.html">Главная</a></li>
         <li>Отзывы</li>
       </ul>
-      <h1 class="col-12">Отзывы</h1>
+      <h1 class="title  col-12">Отзывы</h1>
       <div class="feedback__list col-12">
         <article class="feedback__item">
           <div class="feedback__name">
-            <img src="img/teamPhoto.png" alt="">
+            <div class="feedback__img-wrapper">
+              <img src="img/teamPhoto.png" alt="">
+            </div>
             <b>Иван Иванов Иван Иван Иван</b>
             <time>12.09.2018</time>
           </div>
@@ -89,7 +91,9 @@
         </article>
         <article class="feedback__item">
           <div class="feedback__name">
-            <img src="img/teamPhoto.png" alt="">
+            <div class="feedback__img-wrapper">
+              <img src="img/teamPhoto.png" alt="">
+            </div>
             <b>Иван Иванов Иван Иван Иван</b>
             <time>12.09.2018</time>
           </div>
@@ -114,8 +118,8 @@
         <div class="feedback-form__wrapper col-12 col-lg-6">
           <textarea class="feedback-form__textarea  text-field" placeholder="Ваш отзыв"></textarea>
           <div class="feedback-form__btn-wrapper">
-            <input id="input-file" class="inputfile" type="file" accept="image/*">
-            <label class="feedback-form__btn btn" for="input-file">Выбрать фото</label>
+            <input id="input-file" class="inputfile" type="file" accept="image/*" data-multiple-caption="{count} files selected">
+            <label class=" feedback-form__btn btn" for="input-file">Выбрать фото</label>
             <input class="feedback-form__btn  btn" type="submit" value="Отправить">
           </div>
         </div>
