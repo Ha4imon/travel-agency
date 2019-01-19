@@ -222,3 +222,31 @@
     tranform();
   }
 })();
+
+(function () {
+  var inputs = document.querySelectorAll('.inputfile');
+  Array.prototype.forEach.call(inputs, function (input) {
+    var label = input.nextElementSibling,
+      labelVal = label.textContent;
+    input.addEventListener('change', function (e) {
+      var fileName = '';
+      if (this.files && this.files.length > 1)
+        fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+      else
+        fileName = e.target.value.split('\\').pop();
+
+
+      if (fileName) {
+        var sliced = fileName.slice(0, 12);
+        if (sliced.length < fileName.length) {
+          sliced += '...';
+          label.textContent = sliced;
+        } else {
+          label.textContent = fileName;
+        }
+      } else {
+        label.textContent = labelVal;
+      }
+    });
+  });
+})();

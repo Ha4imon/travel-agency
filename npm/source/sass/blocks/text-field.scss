@@ -1,0 +1,13 @@
+.text-field {
+  background-color: transparent;
+  border: 2px solid #fff;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 300;
+  padding: 10px;
+
+  &::placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+}

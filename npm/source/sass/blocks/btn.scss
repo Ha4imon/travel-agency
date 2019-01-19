@@ -1,7 +1,10 @@
 .btn {
   display: block;
+  background-color: transparent;
   border: 1px solid $mainColor;
   color: $mainColor;
+  cursor: pointer;
+  font-family: inherit;
   font-size: 14px;
   font-weight: normal;
   text-align: center;
