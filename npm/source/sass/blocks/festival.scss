@@ -1,0 +1,36 @@
+.festival {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.festival h2 {
+  margin: 0;
+}
+
+.festival__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.festival__wrapper img {
+  margin-bottom: 50px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $laptopWidth) {
+  .festival__wrapper {
+    flex-direction: row;
+  }
+
+  .festival__wrapper img {
+    margin: 0;
+  }
+}

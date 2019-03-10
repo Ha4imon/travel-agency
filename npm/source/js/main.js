@@ -200,14 +200,14 @@
 
   function tranform() {
     if (body.clientWidth + counter < wrapper.scrollWidth && !locked) {
-      counter += 2;
+      counter += 3;
       wrapper.style.transform = 'translateX(' + -counter + 'px)';
     } else {
       locked = true;
     }
 
     if ((counter > 0) && locked) {
-      counter -= 2;
+      counter -= 3;
       wrapper.style.transform = 'translateX(' + -counter + 'px)';
     } else {
       locked = false;
