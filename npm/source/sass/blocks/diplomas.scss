@@ -7,9 +7,16 @@
 }
 
 .diplomas__item {
-  flex: 0 0 25%;
+  flex: 0 0 50%;
+  padding: 0 15px;
 }
 
 .diplomas__item img {
   margin: 0 auto;
+}
+
+@media (min-width: $laptopWidth) {
+  .diplomas__item {
+    flex: 0 0 25%;
+  }
 }

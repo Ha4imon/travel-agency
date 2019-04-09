@@ -101,6 +101,11 @@
   }
 }
 
+.main-menu__wrapper > li > a.active {
+  background-color: darken($mainColor, 10%);
+  cursor: default;
+}
+
 .main-menu__wrapper > li > a {
   display: flex;
   align-items: center;
@@ -186,5 +191,14 @@
       background-color: $mainColor;
       color: #fff;
     }
+  }
+}
+
+@media (min-width: $tabletWidth) {
+  .main-menu__wrapper > li:last-child > a {
+    background-image: url("../img/kazkyrort.png");
+    background-position: 10% center;
+    background-repeat: no-repeat;
+    padding-left: 50px;
   }
 }

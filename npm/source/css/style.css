@@ -363,6 +363,10 @@ html {
   .main-menu__wrapper > li:hover > a {
     background-color: #002f4e; }
 
+.main-menu__wrapper > li > a.active {
+  background-color: #002f4e;
+  cursor: default; }
+
 .main-menu__wrapper > li > a {
   display: flex;
   align-items: center;
@@ -948,6 +952,9 @@ html {
   width: 100%;
   height: 150px; }
 
+.feedback {
+  padding-bottom: 50px; }
+
 .feedback h1 {
   margin-bottom: 20px; }
 
@@ -1232,7 +1239,8 @@ h2.title {
   margin-bottom: 50px; }
 
 .diplomas__item {
-  flex: 0 0 25%; }
+  flex: 0 0 50%;
+  padding: 0 15px; }
 
 .diplomas__item img {
   margin: 0 auto; }
@@ -1389,6 +1397,11 @@ h2.title {
     .main-menu__wrapper > li > ul > li > a:hover {
       background-color: #004d81;
       color: #fff; }
+  .main-menu__wrapper > li:last-child > a {
+    background-image: url("../img/kazkyrort.png");
+    background-position: 10% center;
+    background-repeat: no-repeat;
+    padding-left: 50px; }
   .action__text b {
     font-size: 28px; }
   .action__text p {
@@ -1580,7 +1593,9 @@ h2.title {
     flex-direction: row;
     margin: 0; }
   .our-partners__wrapper-img img {
-    margin: 0; } }
+    margin: 0; }
+  .diplomas__item {
+    flex: 0 0 25%; } }
 
 @media (min-width: 1200px) {
   .container {
