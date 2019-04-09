@@ -1397,11 +1397,6 @@ h2.title {
     .main-menu__wrapper > li > ul > li > a:hover {
       background-color: #004d81;
       color: #fff; }
-  .main-menu__wrapper > li:last-child > a {
-    background-image: url("../img/kazkyrort.png");
-    background-position: 10% center;
-    background-repeat: no-repeat;
-    padding-left: 50px; }
   .action__text b {
     font-size: 28px; }
   .action__text p {

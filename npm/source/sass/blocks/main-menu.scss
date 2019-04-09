@@ -193,12 +193,3 @@
     }
   }
 }
-
-@media (min-width: $tabletWidth) {
-  .main-menu__wrapper > li:last-child > a {
-    background-image: url("../img/kazkyrort.png");
-    background-position: 10% center;
-    background-repeat: no-repeat;
-    padding-left: 50px;
-  }
-}
