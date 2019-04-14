@@ -20,10 +20,14 @@
 }
 
 .team__img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
   height: 125px;
   width: 125px;
-  margin: 0 auto;
 }
 
 .team__item h3 {

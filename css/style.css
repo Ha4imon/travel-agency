@@ -568,10 +568,14 @@ html {
     margin-bottom: 0; }
 
 .team__img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
   height: 125px;
-  width: 125px;
-  margin: 0 auto; }
+  width: 125px; }
 
 .team__item h3 {
   color: #004d81;
@@ -846,32 +850,19 @@ html {
   list-style: none;
   margin: 20px 0; }
 
-.breadcrumb li {
+.breadcrumb span {
   position: relative;
   color: #004d81;
   font-size: 14px;
   font-weight: 300;
   margin-right: 30px; }
-  .breadcrumb li:last-child {
+  .breadcrumb span:last-child {
     margin-right: 0; }
-    .breadcrumb li:last-child::before {
-      content: none; }
-  .breadcrumb li::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    background-image: url(../img/rightArrow.png);
-    background-repeat: no-repeat;
-    width: 16px;
-    height: 12px; }
 
-.breadcrumb li a {
+.breadcrumb span a {
   color: #004d81;
   font-weight: normal; }
-  .breadcrumb li a:hover {
+  .breadcrumb span a:hover {
     color: #000; }
 
 .map {
