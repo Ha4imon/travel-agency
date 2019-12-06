@@ -850,19 +850,36 @@ html {
   list-style: none;
   margin: 20px 0; }
 
-.breadcrumb span {
+.breadcrumb li {
   position: relative;
   color: #004d81;
   font-size: 14px;
   font-weight: 300;
   margin-right: 30px; }
-  .breadcrumb span:last-child {
+  .breadcrumb li::before, .breadcrumb li::after {
+    content: "";
+    position: absolute;
+    right: -18px;
+    background-color: #004d81;
+    width: 6px;
+    height: 1px; }
+  .breadcrumb li::before {
+    top: calc(50% - 2px);
+    -webkit-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg); }
+  .breadcrumb li::after {
+    top: calc(50% + 2px);
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+            transform: translateY(-50%) rotate(-45deg); }
+  .breadcrumb li:last-child {
     margin-right: 0; }
+    .breadcrumb li:last-child::before, .breadcrumb li:last-child::after {
+      content: none; }
 
-.breadcrumb span a {
+.breadcrumb li a {
   color: #004d81;
   font-weight: normal; }
-  .breadcrumb span a:hover {
+  .breadcrumb li a:hover {
     color: #000; }
 
 .map {
@@ -1047,6 +1064,9 @@ html {
   font-weight: 300;
   padding: 10px; }
   .text-field::-webkit-input-placeholder {
+    color: #fff;
+    opacity: 1; }
+  .text-field::-moz-placeholder {
     color: #fff;
     opacity: 1; }
   .text-field:-ms-input-placeholder {
