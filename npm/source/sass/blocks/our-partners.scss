@@ -2,7 +2,8 @@
   margin-bottom: 50px;
 }
 
-.our-partners .title {
+.our-partners__title{
+  color: $mainColor;
   margin-top: 0;
   margin-bottom: 40px;
 }
@@ -26,14 +27,38 @@
   margin-bottom: 30px;
 }
 
+.our-partners__imgs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-partners__imgs img {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 
 @media (min-width: $laptopWidth) {
   .our-partners__wrapper {
     flex-direction: row;
     margin: 0;
+    margin-bottom: 30px;
   }
 
   .our-partners__wrapper-img img {
     margin: 0;
+  }
+
+  .our-partners__imgs {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .our-partners__imgs img {
+    margin-bottom: 0;
   }
 }

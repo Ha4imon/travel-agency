@@ -1,0 +1,44 @@
+.cooperation {}
+
+.cooperation__title {
+  color: $mainColor;
+  font-size: 20px;
+  text-align: center;
+  display: block;
+}
+
+.cooperation__list {
+  color: $mainColor;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.cooperation__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cooperation__img-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.cooperation__img {
+  margin-bottom: 15px;
+}
+
+@media (min-width: $laptopWidth) {
+  .cooperation__title {
+    font-size: 34px;
+  }
+
+  .cooperation__item {
+    font-size: 20px;
+  }
+}

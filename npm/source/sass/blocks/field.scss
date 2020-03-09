@@ -1,0 +1,15 @@
+.field {
+  color: #004d81;
+  font-family: inherit;
+  font-size: 14px;
+  border: 1px solid #004d81;
+  resize: none;
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 100%;
+}
+
+.field::placeholder {
+  color: #004d81;
+  font-weight: lighter;
+}

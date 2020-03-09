@@ -1,0 +1,52 @@
+.pop-up {
+  max-height: 100%;
+  overflow: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px 0;
+  width: 300px;
+}
+
+.pop-up__title {
+  color: #004d81;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.pop-up__text {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
+}
+
+.pop-up .btn {
+  background-color: #004d81;
+  color: #fff;
+  width: 100%;
+}
+
+.pop-up .btn:hover {
+  background-color: #fff;
+  color: #004d81;
+}
+
+.pop-up__checkbox {
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: 22px;
+  display: block;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .pop-up {
+    padding: 10px 15px 0;
+    width: 420px;
+  }
+}

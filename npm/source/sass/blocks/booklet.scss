@@ -1,0 +1,130 @@
+.booklet__wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.booklet__wrapper--white {
+  background-color: #fff;
+  color: $mainColor;
+}
+
+.booklet__wrapper--blue {
+  background-color: $mainColor;
+  color: #fff;
+}
+
+.booklet__title {
+  font-size: 20px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  height: 90px;
+  padding-left: 60px;
+}
+
+.booklet__list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.booklet__item {
+  position: relative;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding-left: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.booklet__item--icon::before {
+  background-image: url(../img/booklet-icon1.png);
+}
+
+.booklet__item--auto::before {
+  background-image: url(../img/booklet2.1.png);
+}
+
+.booklet__item--bus::before {
+  background-image: url(../img/booklet2.2.png);
+}
+
+.booklet__item--air::before {
+  background-image: url(../img/booklet2.3.png);
+}
+
+.booklet__item--jd::before {
+  background-image: url(../img/booklet2.4.png);
+}
+
+.booklet__item--board::before {
+  background-image: url(../img/booklet1.1.png);
+}
+
+.booklet__item--tour::before {
+  background-image: url(../img/booklet1.2.png);
+}
+
+.booklet__item--mask::before {
+  background-image: url(../img/booklet1.3.png);
+}
+
+.booklet__item--bron::before {
+  background-image: url(../img/booklet1.4.png);
+}
+
+.booklet__item--visa::before {
+  background-image: url(../img/booklet1.5.png);
+}
+
+.booklet__kazkyrort {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.booklet__kazkyrort .booklet__img {
+  margin: auto 0;
+}
+
+
+@media (min-width: $laptopWidth) {
+  .booklet__logo {
+    height: 90px;
+  }
+
+  .booklet__logo img {
+    max-height: 100%;
+  }
+
+  .booklet__title {
+    font-size: 30px;
+  }
+
+  .booklet__item {
+    font-size: 20px;
+    padding-left: 60px;
+
+
+    &::before {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}

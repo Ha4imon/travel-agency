@@ -51,8 +51,14 @@
 
 .reviews__img-wrapper {
   border-radius: 50%;
+  overflow: hidden;
   height: 125px;
   width: 125px;
+}
+
+.reviews__img-wrapper img {
+  height: 100%;
+  width: 100%;
 }
 
 .reviews__title h3 {

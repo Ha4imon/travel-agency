@@ -133,7 +133,7 @@
 }
 
 
-@media (min-width: $tabletWidth) {
+@media (min-width: $laptopWidth) {
   .main-menu__btn {
     display: none;
   }
@@ -151,6 +151,7 @@
   .main-menu__wrapper > li,
   .main-menu__wrapper > li > a {
     border-bottom: none;
+    font-size: 14px;
     width: auto;
     flex-grow: 1;
   }
@@ -191,5 +192,11 @@
       background-color: $mainColor;
       color: #fff;
     }
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .main-menu__wrapper > li > a {
+    font-size: 16px;
   }
 }
